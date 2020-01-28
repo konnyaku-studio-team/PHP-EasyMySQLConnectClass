@@ -1,6 +1,6 @@
 # PHP-EasyMySQLConnectClass
 ## 🎃VeryGood!Easy To Connect MySQL!With GPL 3 License.
-### [简体中文版 Chinese Simplified](ZH-README.md)|[English Edition](README.md)
+### [简体中文版 Chinese Simplified](CN-README.md)|[English Edition](README.md)
 # Easy To Connect SQL
 ## Factures:
      1.Very Easy To Connect MySQL Server
