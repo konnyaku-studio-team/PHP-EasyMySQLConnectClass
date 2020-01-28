@@ -3,8 +3,13 @@
 ### [简体中文版 Chinese Simplified](ZH-README.md)|[English Edition](README.md)
 # Easy To Connect SQL
 ## Factures:
-1.Very Easy To Connect MySQL Server
-2.Very Easy To Change Charset
+     1.Very Easy To Connect MySQL Server
+     2.Very Easy To Change Charset
 ## To DO List:
-1.Write a Magic PHP Class
-2.To be friendly
+     1.Write a Magic PHP Class
+     2.To be friendly
+## Warning
+     Priview , Alpha and Beta version have some new features, but it has not been tested, and there may be uncertain factors. If you want to use it in a production environment, please use the official version.
+## Notice
+     This project is updated about once a month, a beta version is released about every 15 days, a medium update is released every three months, and a large update is released every 6 months.
+     Of course, did you find that the bug is not in Issue yet?
