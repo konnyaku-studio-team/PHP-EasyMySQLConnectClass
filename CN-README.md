@@ -3,9 +3,9 @@
 ### [简体中文版 Chinese Simplified](ZH-README.md)|[English Edition](README.md)
 # 更简单的去连接MySQL！
 ## 特性
-     1.更好的连接MySQL数据库 
-     2.更好的改变字符集
-     3.没有了QAQ
+>     1.更好的连接MySQL数据库 
+>     2.更好的改变字符集
+>     3.~~可以上B站咕咕咕（逃~~
 ## TODO
      1.更加友好
      2.更加贴合PHP类
