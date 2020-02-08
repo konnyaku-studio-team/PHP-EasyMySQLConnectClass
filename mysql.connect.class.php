@@ -18,10 +18,37 @@
 //蒟蒻工作室版權所有2018-2020
 class MySQLConn
 {
-	private $sqlconn;
+	public $sqlconn;
+	private $debug_mode;
+	public function __construct($server="localhost",$port=3306,$uname="root",$password,$database,$debugmode){
+		$sqlconn=mysqli_connect($server,$uname,$password,$database,$port);
+		$debug_mode=$debugmode;
+		if($debug_mode){
+			if($sqlconn){
+				echo "Mysql Connect Win!";
+			}else{
+				echo "Mysql Connect Failed.";
+			}
+		}
+		// Use mysqli
+		// connect server
+		// sample:$connect=MySQLConn();$connect->conn("localhost","3306","root","aabbccdd","db_test23333XSWL");\\
+        // Default server:localhost(127.0.0.1)
+        //port:3306
+        //uname:root
+		//debug mode
+		//Debug mode can debug~
+	}
 	public function conn($server="localhost",$port=3306,$uname="root",$password,$database)
 	{
-		$this->$sqlconn=mysqli_connect($server,$uname,$password,$database,$port);
+		$sqlconn=mysqli_connect($server,$uname,$password,$database,$port);
+		if($debug_mode){
+			if($sqlconn){
+				echo "Mysql Connect Win!";
+			}else{
+				echo "Mysql Connect Failed.";
+			}
+		}
 		// Use mysqli
 		// connect server
 		// sample:$connect=MySQLConn();$connect->conn("localhost","3306","root","aabbccdd","db_test23333XSWL");\\
@@ -31,7 +58,14 @@ class MySQLConn
 	}
 	public function choosedb($database)
 	{
-		mysqli_select_db($this->$sqlconn);
+		$a=mysqli_select_db($sqlconn);
+		if($debug_mode){
+			if($a){
+				echo "Select DB Win!";
+			}else{
+				echo "Select DB Failed.";
+			}
+		}
         // Use mysqli
         // choose database
         // sample:$connect->choosedb("xswl2333");
@@ -39,7 +73,14 @@ class MySQLConn
     public function charset($char="utf-8")
     {
         $sql="SET NAMES ".$char;
-        mysqli_query($this->$sqlconn,$sql);
+        $fetch=mysqli_query($sqlconn,$sql);
+		if($debug_mode){
+			if($fetch){
+				echo "Charset Win!";
+			}else{
+				echo "Charset Failed.";
+			}
+		}
         // Use mysqli
         // update charset
         // sample:$connect->charset("XSWL");
@@ -48,7 +89,14 @@ class MySQLConn
     }
     public function query($sql)
     {
-        mysqli_query($this->$sqlconn,$sql);
+        $fetch=mysqli_query($sqlconn,$sql);
+		if($debug_mode){
+			if($fetch){
+				echo "Query Win!";
+			}else{
+				echo "Query Failed.";
+			}
+		}
         // Use mysqli
         // query sql
         // Do not know SQL?
